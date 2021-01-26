@@ -5,9 +5,15 @@
 #ifndef EXAMEN02DATOS_MENU_H
 #define EXAMEN02DATOS_MENU_H
 
+#include"Tools.h"
 
 class Menu {
-
+public:
+    void menuPrincipal();
+    void uploadFiles();
+    void dijkstraAlgorithm();
+    void primAlgorithm();
+    void kruskalAlgorithm();
 };
 
 
