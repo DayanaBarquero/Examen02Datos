@@ -1,9 +1,8 @@
 //
 // Created by dayan on 26/1/2021.
 //
-#include<iostream>
-using namespace std;
+#include <iostream>
 int main(){
-    cout<<"Hola";
+    std::cout<<"hola";
     return 0;
 }
