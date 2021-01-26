@@ -28,12 +28,26 @@ void Vertex::setSecondVertex(const std::string &secondVertex) {
     Vertex::secondVertex = secondVertex;
 }
 
-Vertex::Vertex(int weight, const std::string &firstVertex, const std::string &secondVertex) : weight(weight),
-                                                                                          firstVertex(firstVertex),
-                                                                                          secondVertex(secondVertex) {}
+Vertex::Vertex(int weight, std::string firstVertex, std::string secondVertex) : weight(weight),
+                                                                                          firstVertex(std::move(firstVertex)),
+                                                                                          secondVertex(std::move(secondVertex)) {}
 
-Vertex::~Vertex() {
+Vertex::~Vertex() {}
 
+Vertex::Vertex() {
+    weight = 0;
+    firstVertex = "";
+    secondVertex = "";
 }
 
-Vertex::Vertex() {}
+bool Vertex::operator==(const Vertex &e2) const {
+    return getFirstVertex() == e2.getFirstVertex() && getSecondVertex() == e2.getSecondVertex();
+}
+std::string Vertex::toString() {
+    std::stringstream s;
+    s<<"Vertix 1:"<<getFirstVertex()<<std::endl;
+    s<<"Vertix 2:"<<getSecondVertex()<<std::endl;
+    s<<"Weight:"<<getWeight()<<std::endl;
+    return s.str();
+
+}

@@ -5,7 +5,7 @@
 #ifndef EXAMEN02DATOS_Vertex_H
 #define EXAMEN02DATOS_Vertex_H
 #include <iostream>
-
+#include <sstream>
 class Vertex {
 private:
     int weight;
@@ -16,7 +16,7 @@ public:
 
     virtual ~Vertex();
 
-    Vertex(int weight, const std::string &firstVertex, const std::string &secondVertex);
+    Vertex(int weight, std::string firstVertex, std::string secondVertex);
 
     int getWeight() const;
 
@@ -29,6 +29,11 @@ public:
     const std::string &getSecondVertex() const;
 
     void setSecondVertex(const std::string &secondVertex);
+
+    std::string toString();
+
+    bool operator == (const Vertex& e2) const;
+
 
 };
 
