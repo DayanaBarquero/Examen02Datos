@@ -5,11 +5,11 @@
 #include"Graph.h"
 int main(){
     Graph graph;
-    graph.insertVertex(Vertex(8,"A","B" ));
-    graph.insertVertex(Vertex(12,"A","C" ));
-    graph.insertVertex(Vertex(9,"B","C" ));
-    graph.insertVertex(Vertex(8,"B","D" ));
-    graph.insertVertex(Vertex(3,"C","E" ));
+    graph.insertVertex(Vertex("A","B" ,8));
+    graph.insertVertex(Vertex("A","C",12));
+    graph.insertVertex(Vertex("B","C",9 ));
+    graph.insertVertex(Vertex("B","D",8 ));
+    graph.insertVertex(Vertex("C","E",3 ));
 
     std::cout<<graph.toString();
     return 0;

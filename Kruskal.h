@@ -10,9 +10,11 @@
 #include <vector>
 #include <algorithm>
 typedef pair<int,int> iPair;
-class Kruskal {
+class Kruskal  {
 private:
     int V,E;
+    Graph graph;
+    vector<Vertex> vertexs;
     vector<pair<int,iPair >>edges;
 public:
     Kruskal(int V,int E);
@@ -20,6 +22,8 @@ public:
     int kruskaMST();
 
 };
+
+
 
 
 #endif //EXAMEN02DATOS_KRUSKAL_H

@@ -8,11 +8,13 @@
 #include<vector>
 #include<iostream>
 #include<sstream>
+#include<set>
 using namespace std;
 
 class Graph {
 private:
     vector<Vertex> *g;
+
 public:
     Graph();
     void insertVertex(Vertex edge);

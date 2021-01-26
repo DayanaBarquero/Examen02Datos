@@ -3,12 +3,13 @@
 //
 
 #include "Vertex.h"
+#include <cmath>
 
 
-Vertex::Vertex(int weight, const std::string &firstVertex, const std::string &secondVertex) : weight(weight),
+Vertex::Vertex( const std::string &firstVertex, const std::string &secondVertex,int weight) :
                                                                                               firstVertex(firstVertex),
                                                                                               secondVertex(
-                                                                                                      secondVertex) {}
+                                                                                                      secondVertex),weight(weight) {}
 int Vertex::getWeight() const {
     return weight;
 }
