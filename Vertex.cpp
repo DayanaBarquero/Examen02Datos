@@ -46,8 +46,9 @@ Vertex::Vertex() {
 
 std::string Vertex::toString() const {
     std::stringstream s;
-    s << "Vertix 1:" << getFirstVertex() << std::endl;
-    s << "Vertix 2:" << getSecondVertex() << std::endl;
+    s<<"Vertix: ("<<getFirstVertex()<<","<<getSecondVertex()<<")"<<std::endl;
+/*    s << "Vertix 1:" << getFirstVertex() << std::endl;
+    s << "Vertix 2:" << getSecondVertex() << std::endl;*/
     s << "Weight:" << getWeight() << std::endl;
     return s.str();
 }
