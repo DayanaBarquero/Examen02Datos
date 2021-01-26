@@ -6,7 +6,7 @@
 #define EXAMEN02DATOS_KRUSKAL_H
 #include <iostream>
 #include "DisjointSets.h"
-#include "Graph.h"
+//#include "Graph.h"
 #include <vector>
 #include <algorithm>
 typedef pair<int,int> iPair;
@@ -15,6 +15,8 @@ private:
     int V,E;
     vector<pair<int,iPair >>edges;
 public:
+    virtual ~Kruskal();
+
     Kruskal(int V,int E);
     void addEdge(int u,int v,int w);
     int kruskaMST();
