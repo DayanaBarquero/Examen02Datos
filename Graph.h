@@ -12,7 +12,7 @@ using namespace std;
 
 class Graph {
 private:
-    vector<Vertex>* g;
+    vector<Vertex> *g;
 public:
     Graph();
     void insertVertex(Vertex edge);

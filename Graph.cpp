@@ -12,24 +12,24 @@ void Graph::insertVertex(Vertex edge) {
     g->push_back(edge);
 }
 
-/*
+
 bool Graph::eraseEdge(Vertex edge) {
     vector<Vertex>::iterator pos;
     for(pos = g->begin(); pos != g->end(); pos++){
-        //if(*pos==edge){
+        if(*pos == edge){
             g->erase(pos);
             return true;
         }
     }
     return false;
 }
-*/
+
 
 string Graph::toString() {
     stringstream s;
     vector<Vertex>::iterator pos;
     for(pos=g->begin(); pos!=g->end();pos++){
-       // s<<pos->toString()<<endl;
+       s<<pos->toString()<<endl;
     }
     return s.str();
 }

@@ -12,11 +12,12 @@ private:
     std::string firstVertex;
     std::string secondVertex;
 public:
+    public:
     Vertex();
 
     virtual ~Vertex();
 
-    Vertex(int weight, std::string firstVertex, std::string secondVertex);
+    Vertex(int weight, const std::string &firstVertex, const std::string &secondVertex);
 
     int getWeight() const;
 
@@ -32,7 +33,9 @@ public:
 
     std::string toString() const;
 
-    bool operator == (const Vertex& e2) const;
+    bool operator==(const Vertex &rhs) const;
+
+    bool operator!=(const Vertex &rhs) const;
 
 
 };

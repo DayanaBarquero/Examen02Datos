@@ -4,6 +4,11 @@
 
 #include "Vertex.h"
 
+
+Vertex::Vertex(int weight, const std::string &firstVertex, const std::string &secondVertex) : weight(weight),
+                                                                                              firstVertex(firstVertex),
+                                                                                              secondVertex(
+                                                                                                      secondVertex) {}
 int Vertex::getWeight() const {
     return weight;
 }
@@ -28,9 +33,7 @@ void Vertex::setSecondVertex(const std::string &secondVertex) {
     Vertex::secondVertex = secondVertex;
 }
 
-Vertex::Vertex(int weight, std::string firstVertex, std::string secondVertex) : weight(weight),
-                                                                                          firstVertex(std::move(firstVertex)),
-                                                                                          secondVertex(std::move(secondVertex)) {}
+
 
 Vertex::~Vertex() {}
 
@@ -40,14 +43,24 @@ Vertex::Vertex() {
     secondVertex = "";
 }
 
-bool Vertex::operator==(const Vertex &e2) const {
-    return getFirstVertex() == e2.getFirstVertex() && getSecondVertex() == e2.getSecondVertex();
-}
+
 std::string Vertex::toString() const {
     std::stringstream s;
-    s<<"Vertix 1:"<<getFirstVertex()<<std::endl;
-    s<<"Vertix 2:"<<getSecondVertex()<<std::endl;
-    s<<"Weight:"<<getWeight()<<std::endl;
+    s << "Vertix 1:" << getFirstVertex() << std::endl;
+    s << "Vertix 2:" << getSecondVertex() << std::endl;
+    s << "Weight:" << getWeight() << std::endl;
     return s.str();
-
 }
+
+
+bool Vertex::operator==(const Vertex &rhs) const {
+    return weight == rhs.weight &&
+           firstVertex == rhs.firstVertex &&
+           secondVertex == rhs.secondVertex;
+}
+
+bool Vertex::operator!=(const Vertex &rhs) const {
+    return !(rhs == *this);
+}
+
+
