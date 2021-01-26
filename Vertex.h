@@ -30,7 +30,7 @@ public:
 
     void setSecondVertex(const std::string &secondVertex);
 
-    std::string toString();
+    std::string toString() const;
 
     bool operator == (const Vertex& e2) const;
 

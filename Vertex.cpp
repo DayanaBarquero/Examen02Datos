@@ -43,7 +43,7 @@ Vertex::Vertex() {
 bool Vertex::operator==(const Vertex &e2) const {
     return getFirstVertex() == e2.getFirstVertex() && getSecondVertex() == e2.getSecondVertex();
 }
-std::string Vertex::toString() {
+std::string Vertex::toString() const {
     std::stringstream s;
     s<<"Vertix 1:"<<getFirstVertex()<<std::endl;
     s<<"Vertix 2:"<<getSecondVertex()<<std::endl;
