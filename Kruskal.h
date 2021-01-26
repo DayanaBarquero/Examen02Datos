@@ -5,13 +5,19 @@
 #ifndef EXAMEN02DATOS_KRUSKAL_H
 #define EXAMEN02DATOS_KRUSKAL_H
 #include <iostream>
-
+#include "DisjointSets.h"
+#include "Graph.h"
+#include <vector>
+#include <algorithm>
+typedef pair<int,int> iPair;
 class Kruskal {
 private:
-
+    int V,E;
+    vector<pair<int,iPair >>edges;
 public:
-    Kruskal();
-
+    Kruskal(int V,int E);
+    void addEdge(int u,int v,int w);
+    int kruskaMST();
 
 };
 
