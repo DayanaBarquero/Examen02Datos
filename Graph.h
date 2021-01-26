@@ -17,7 +17,7 @@ public:
     Graph();
     void insertVertex(Vertex edge);
     bool eraseEdge(Vertex edge);
-    bool isAdajcent(string u, string v);
+    bool isAdjacent(string u, string v);
     string toString();
 };
 

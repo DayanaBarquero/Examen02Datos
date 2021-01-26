@@ -33,3 +33,14 @@ string Graph::toString() {
     }
     return s.str();
 }
+
+bool Graph::isAdjacent(string u, string v) {
+    vector<Vertex>::iterator pos;
+    for(pos=g->begin(); pos !=g->end();pos++){
+        if(pos->getFirstVertex()==u||pos->getSecondVertex()==v){
+            if(pos->getSecondVertex()==u||pos->getFirstVertex()==v)
+                return true;
+        }
+    }
+    return false;
+}
