@@ -20,3 +20,5 @@ int Kruskal::kruskaMST() {
 
     return 0;
 }
+
+

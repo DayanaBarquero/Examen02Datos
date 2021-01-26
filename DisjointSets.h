@@ -6,6 +6,7 @@
 #define EXAMEN02DATOS_DISJOINTSETS_H
 #include <iostream>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 class DisjointSets {
@@ -13,7 +14,9 @@ private:
     int *parent,*rnk;
     int n;
 public:
-    DisjointSets(int n);
+    virtual ~DisjointSets();
+
+    explicit DisjointSets(int n);
     int find(int u);
     void merge(int x,int y);
 };
