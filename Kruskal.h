@@ -7,7 +7,7 @@
 #include <iostream>
 #include "DisjointSets.h"
 //#include "Graph.h"
-#include <vector>
+/*#include <vector>
 #include <algorithm>
 typedef pair<int,int> iPair;
 class Kruskal  {
@@ -23,7 +23,7 @@ public:
     void addEdge(int u,int v,int w);
     int kruskaMST();
 
-};
+};*/
 
 
 

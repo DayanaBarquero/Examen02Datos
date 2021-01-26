@@ -2,7 +2,7 @@
 // Created by dayan on 26/1/2021.
 //
 
-#include "Kruskal.h"
+#/*include "Kruskal.h"
 
 Kruskal::Kruskal(int V, int E) {
     this->V= V;
@@ -19,6 +19,6 @@ int Kruskal::kruskaMST() {
     DisjointSets ds(V);
 
     return 0;
-}
+}*/
 
 
