@@ -45,9 +45,9 @@ void Kruskal::kruskaMST(Graph &g) {
     for (auto c:g.getVertices()) {
         makeSet(c);
     }
-    /*sort(g.getG()->begin(),g.getG()->end(),[](Graph x,Graph y)
-    {return x.getWeight() < y.getWeight();});
-     */
+   /* sort(g.getG()->begin(),g.getG()->end(),[](Graph x,Graph y)
+    {return x.getWeight() < y.getWeight();});*/
+
 
     for(const Vertex& e:*g.getG()){
         string u = find(e.getFirstVertex());
