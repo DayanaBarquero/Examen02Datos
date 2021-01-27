@@ -5,26 +5,24 @@
 #ifndef EXAMEN02DATOS_KRUSKAL_H
 #define EXAMEN02DATOS_KRUSKAL_H
 #include <iostream>
-#include "DisjointSets.h"
-//#include "Graph.h"
-/*#include <vector>
+#include "Graph.h"
+#include <vector>
 #include <algorithm>
-typedef pair<int,int> iPair;
-class Kruskal  {
+#include <unordered_map>
+using namespace std;
+class Kruskal {
 private:
-    int V,E;
-    Graph graph;
-    vector<Vertex> vertexs;
-    vector<pair<int,iPair >>edges;
+    vector<char> v;
+    vector<Graph> edges;
 public:
+    static char find(char vertex);
+    static void Union(char root1,char root2);
+    static void makeSet(char vertex);
+    Kruskal();
     virtual ~Kruskal();
+    static void kruskaMST(Graph& g);
 
-    Kruskal(int V,int E);
-    void addEdge(int u,int v,int w);
-    int kruskaMST();
-
-};*/
-
+};
 
 
 

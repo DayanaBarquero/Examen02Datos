@@ -1,16 +1,21 @@
 //
 // Created by dayan on 26/1/2021.
 //
-#include <iostream>
 #include"Graph.h"
+#include "Kruskal.h"
 int main(){
-    Graph graph;
-    graph.insertVertex(Vertex("A","B" ,8));
-    graph.insertVertex(Vertex("A","C",12));
-    graph.insertVertex(Vertex("B","C",9 ));
-    graph.insertVertex(Vertex("B","D",8 ));
-    graph.insertVertex(Vertex("C","E",3 ));
+    Vertex d;
+    d.setFirstVertex('A');
+    d.setSecondVertex('B');
+    d.setWeight(8);
+    cout<<d.toString();
+   Graph graph;
+   graph.insertVertex(d);
+   cout<<graph.toString();
+   Kruskal f;
+   f.kruskaMST(graph);
 
-    std::cout<<graph.toString();
+
+
     return 0;
 }

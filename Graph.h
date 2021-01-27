@@ -8,19 +8,34 @@
 #include<vector>
 #include<iostream>
 #include<sstream>
-#include<set>
 using namespace std;
-
+#include "Vertex.h"
 class Graph {
 private:
+    vector<char>vertices;
     vector<Vertex> *g;
-
+    Vertex *v;
 public:
+    const vector<char> &getVertices() const;
+
+    void setVertices(const vector<char> &vertices);
+
+    Vertex *getV() const;
+
+    void setV(Vertex *v);
+
     Graph();
+    char getVertexFirst();
+    char getVetexSecond();
+    int getWeight();
     void insertVertex(Vertex edge);
     bool eraseEdge(Vertex edge);
-    bool isAdjacent(string u, string v);
+    bool isAdjacent(char u, char v);
     string toString();
+
+    vector<Vertex> *getG() const;
+
+    void setG(vector<Vertex> *g);
 };
 
 
