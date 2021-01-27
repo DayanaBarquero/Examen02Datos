@@ -11,13 +11,14 @@
 #include <fstream>
 #include <vector>
 #include "Vertex.h"
+#include "Graph.h"
 using namespace std;
 
 
 
 class Files {
 public:
-    void readVertex(vector<Vertex *>);
+    static void readVertex(Graph*);
 };
 
 #endif //EXAMEN02DATOS_FILE_H
