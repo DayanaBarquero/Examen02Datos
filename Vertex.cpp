@@ -4,7 +4,7 @@
 
 #include "Vertex.h"
 
-Vertex::Vertex( const char &firstVertex, const char &secondVertex,int weight) :
+Vertex::Vertex( const string &firstVertex, const string &secondVertex,int weight) :
                                                                                               firstVertex(firstVertex),
                                                                                               secondVertex(
                                                                                                       secondVertex),weight(weight) {}
@@ -16,19 +16,19 @@ void Vertex::setWeight(int weight) {
     Vertex::weight = weight;
 }
 
-const char &Vertex::getFirstVertex() const {
+const string &Vertex::getFirstVertex() const {
     return firstVertex;
 }
 
-void Vertex::setFirstVertex(const char &firstVertex) {
+void Vertex::setFirstVertex(const string &firstVertex) {
     Vertex::firstVertex = firstVertex;
 }
 
-const char &Vertex::getSecondVertex() const {
+const string &Vertex::getSecondVertex() const {
     return secondVertex;
 }
 
-void Vertex::setSecondVertex(const char &secondVertex) {
+void Vertex::setSecondVertex(const string &secondVertex) {
     Vertex::secondVertex = secondVertex;
 }
 

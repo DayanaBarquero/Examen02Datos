@@ -7,30 +7,31 @@
 #include <iostream>
 #include <sstream>
 #include<string>
+using namespace std;
 class Vertex {
 private:
     int weight;
-    char firstVertex;
-    char secondVertex;
+    string firstVertex;
+    string secondVertex;
 public:
     public:
     Vertex();
 
     virtual ~Vertex();
 
-    Vertex( const char &firstVertex, const char &secondVertex, int weight);
+    Vertex( const string &firstVertex, const string &secondVertex, int weight);
 
     int getWeight() const;
 
     void setWeight(int weight);
 
-    const char &getFirstVertex() const;
+    const string &getFirstVertex() const;
 
-    void setFirstVertex(const char &firstVertex);
+    void setFirstVertex(const string &firstVertex);
 
-    const char &getSecondVertex() const;
+    const string &getSecondVertex() const;
 
-    void setSecondVertex(const char &secondVertex);
+    void setSecondVertex(const string &secondVertex);
 
     std::string toString() const;
 

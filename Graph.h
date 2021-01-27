@@ -12,25 +12,25 @@ using namespace std;
 #include "Vertex.h"
 class Graph {
 private:
-    vector<char>vertices;
+    vector<string>vertices;
     vector<Vertex> *g;
     Vertex *v;
 public:
-    const vector<char> &getVertices() const;
+    const vector<string> &getVertices() const;
 
-    void setVertices(const vector<char> &vertices);
+    void setVertices(const vector<string> &vertices);
 
     Vertex *getV() const;
 
     void setV(Vertex *v);
 
     Graph();
-    char getVertexFirst();
-    char getVetexSecond();
+    string getVertexFirst();
+    string getVetexSecond();
     int getWeight();
     void insertVertex(Vertex edge);
     bool eraseEdge(Vertex edge);
-    bool isAdjacent(char u, char v);
+    bool isAdjacent(string u, string v);
     string toString();
 
     vector<Vertex> *getG() const;

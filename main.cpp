@@ -5,8 +5,8 @@
 #include "Kruskal.h"
 int main(){
     Vertex d;
-    d.setFirstVertex('A');
-    d.setSecondVertex('B');
+    d.setFirstVertex("A");
+    d.setSecondVertex("B");
     d.setWeight(8);
     cout<<d.toString();
    Graph graph;

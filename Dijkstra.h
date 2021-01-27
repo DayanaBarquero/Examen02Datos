@@ -9,9 +9,9 @@
 #include<set>
 #include<list>
 #include<vector>
-#include "DisjointSets.h"
+//#include "DisjointSets.h"
 #define INF 0x3f3f3f3f
-
+using namespace std;
 class Dijkstra {
    int V;
    list<pair<int, int>> *adj;

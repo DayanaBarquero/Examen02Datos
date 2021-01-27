@@ -12,12 +12,12 @@
 using namespace std;
 class Kruskal {
 private:
-    vector<char> v;
+    vector<string> v;
     vector<Graph> edges;
 public:
-    static char find(char vertex);
-    static void Union(char root1,char root2);
-    static void makeSet(char vertex);
+    static string find(string vertex);
+    static void Union(string root1,string root2);
+    static void makeSet(string vertex);
     Kruskal();
     virtual ~Kruskal();
     static void kruskaMST(Graph& g);

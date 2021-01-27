@@ -4,15 +4,15 @@
 
 #include "Kruskal.h"
 
-unordered_map<char,char> Parent;
-unordered_map<char,int> Rank;
+unordered_map<string,string> Parent;
+unordered_map<string,int> Rank;
 
 Kruskal::~Kruskal() {
 
 }
 Kruskal::Kruskal() {}
 
-char Kruskal::find(char vertex) {
+string Kruskal::find(string vertex) {
     if(Parent[vertex] == vertex)
         return Parent[vertex];
     else
@@ -20,7 +20,7 @@ char Kruskal::find(char vertex) {
 
 }
 
-void Kruskal::Union(char root1, char root2) {
+void Kruskal::Union(string root1, string root2) {
     if(Rank[root1] > Rank[root2]){
         Parent[root2] = root1;
     }
@@ -35,7 +35,7 @@ void Kruskal::Union(char root1, char root2) {
     }
 }
 
-void Kruskal::makeSet(char vertex) {
+void Kruskal::makeSet(string vertex) {
     Parent[vertex] = vertex;
     Rank[vertex] = 0;
 }
@@ -49,8 +49,8 @@ void Kruskal::kruskaMST(Graph &g) {
     {return x.getWeight() < y.getWeight();});
 */
     for(const Vertex& e:*g.getG()){
-        char u = find(e.getFirstVertex());
-        char v = find(e.getSecondVertex());
+        string u = find(e.getFirstVertex());
+        string v = find(e.getSecondVertex());
         if(u != v){
             A.push_back(e);
             Union(u,v);

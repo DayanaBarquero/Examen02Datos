@@ -34,7 +34,7 @@ string Graph::toString() {
     return s.str();
 }
 
-bool Graph::isAdjacent(char u, char v) {
+bool Graph::isAdjacent(string u, string v) {
     vector<Vertex>::iterator pos;
     for(pos=g->begin(); pos !=g->end();pos++){
         if(pos->getFirstVertex()==u||pos->getSecondVertex()==v){
@@ -52,21 +52,21 @@ vector<Vertex> *Graph::getG() const {
 void Graph::setG(vector<Vertex> *g) {
     Graph::g = g;
 }
-char Graph::getVertexFirst() {
+string Graph::getVertexFirst() {
     return v->getFirstVertex();
 }
-char Graph::getVetexSecond() {
+string Graph::getVetexSecond() {
     return v->getSecondVertex();
 }
 int Graph::getWeight() {
     return v->getWeight();
 }
 
-const vector<char> &Graph::getVertices() const {
+const vector<string> &Graph::getVertices() const {
     return vertices;
 }
 
-void Graph::setVertices(const vector<char> &vertices) {
+void Graph::setVertices(const vector<string> &vertices) {
     Graph::vertices = vertices;
 }
 
