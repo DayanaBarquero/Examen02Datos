@@ -4,7 +4,7 @@
 
 #ifndef EXAMEN02DATOS_DIJKSTRA_H
 #define EXAMEN02DATOS_DIJKSTRA_H
-#include <algorithm>
+/*#include <algorithm>
 #include<iostream>
 #include<set>
 #include<list>
@@ -20,6 +20,26 @@ public:
     void addEdge(int u, int v, int w);
     void dijkstraAlgorithm(int s);
     void print(vector<int>);
+
+};*/
+#include <algorithm>
+#include<iostream>
+#include<set>
+#include<list>
+#include<vector>
+#include<queue>
+//#include "DisjointSets.h"
+#define INF 0x3f3f3f3f
+using namespace std;
+class Dijkstra {
+    int V;
+    list<pair<int, int>> *adj;
+public:
+    Dijkstra(int V);
+    void addEdge(int u, int v, int w);
+    void dijkstraAlgorithm(int s);
+    void print(vector<int>);
+    void dijkstra(int s);
 
 };
 

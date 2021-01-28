@@ -19,28 +19,31 @@ int main(){
 
     int seq = 0;
     char init_node = 'A';
-    char dest_node = 'G';
+    char dest_node = 'I';
 
-    Dijkstra2 g;
-    g.add_vertex('A', {{'B', 1}, {'C', 4}, {'F', 2}});
-    g.add_vertex('B', {{'E', 2}});
-    g.add_vertex('C', {{'G', 2}, {'D', 4}});
-    g.add_vertex('D', {});
-    g.add_vertex('E', {{'D', 3}});
-    g.add_vertex('F', {{'C', 1}, {'G', 4}});
-    g.add_vertex('G', {{'E', 5}});
+    DijkstraAlgorithm g;
+    g.insertVertex('A', {{'B', 8}, {'C', 12}});
+    g.insertVertex('B', {{'C', 9},{'D',8}});
+    g.insertVertex('C', {{'E', 3}, {'F', 1}});
+    g.insertVertex('D', {{'E', 7}, {'F', 11}, {'H',5},{'G',8}});
+    g.insertVertex('E', {{'F', 3}});
+    g.insertVertex('F', {{'H', 6}});
+    g.insertVertex('G', {{'H', 9},{'I',2}});
+    g.insertVertex('H', {{'I', 11}});
+    g.insertVertex('I',{});
 
     cout << "As initial node: " << init_node << endl;
     cout << "As goal node: " << dest_node << endl;
 
 
-    for (char vertex : g.shortest_path(init_node, dest_node))
+    for (char vertex : g.dijkstraAlgorithm(init_node, dest_node))
     {
-        cout << "Solution path from goal sequence : " << seq << " Node : " << vertex << endl;
+
+        cout << seq << " Node : " << vertex << endl;
         seq++;
     }
 
-    cout << "Solution path from goal sequence : " << seq << " Node : " << init_node << endl;
+    cout <<seq<< " Node : " << init_node << endl;
 
 
 
