@@ -5,6 +5,9 @@
 #include "Menu.h"
 
 void Menu::menuPrincipal() {
+    int V=9,E=14;
+    Graph graph;
+    Graph graph1(V,E);
     Menu m;
     int opcion;
     bool flag = true;
@@ -31,7 +34,7 @@ void Menu::menuPrincipal() {
         switch (opcion) {
             case 1: {
                 try {
-                  Menu::uploadFiles();
+                    File::readVertex(graph);
                 }
                 catch (exception& e) {
                     imprimeCadenaEndl("The file can´t be opened.");
@@ -45,15 +48,21 @@ void Menu::menuPrincipal() {
                 pausa();
                 limpiaPantalla();
             }break;
-
             case 3: {
-
-                m.primAlgorithm();
+                graph1.addEdge(0,1,10);
+                graph1.addEdge(0,2,12);
+                graph1.addEdge(1,2,9);
+                graph1.addEdge(1,3,8);
+                graph1.addEdge(2,4,3);
+                graph1.addEdge(2,5,1);
+                int d;
+                d = graph1.kruskalMST();
+                cout<<"Peso: "<<d;
                 pausa();
                 limpiaPantalla();
             }break;
             case 4: {
-                m.kruskalAlgorithm();
+                m.primAlgorithm();
                 pausa();
                 limpiaPantalla();
             }break;
@@ -72,8 +81,7 @@ void Menu::menuPrincipal() {
 }
 
 void Menu::uploadFiles() {
-    auto *graph = new Graph;
-    File::readVertex(graph);
+
 }
 
 void Menu::dijkstraAlgorithm() {
@@ -84,6 +92,3 @@ void Menu::primAlgorithm() {
 
 }
 
-void Menu::kruskalAlgorithm() {
-
-}

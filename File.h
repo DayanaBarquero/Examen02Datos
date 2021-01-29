@@ -16,7 +16,7 @@ using namespace std;
 
 class File {
 public:
-    static void readVertex(Graph*);
+    static void readVertex(Graph);
 };
 
 #endif //EXAMEN02DATOS_FILE_H

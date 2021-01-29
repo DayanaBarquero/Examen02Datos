@@ -9,7 +9,7 @@ DisjoinSets::DisjoinSets(int n) {
     parent = new int[n+1];
     rnk = new int [n+1];
     for(int i=0;i<=n;i++){
-        rnk[i];
+        rnk[i] = 0;
         parent[i]=i;
     }
 }

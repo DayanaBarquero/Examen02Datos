@@ -11,7 +11,7 @@ private:
     int *parent,*rnk;
     int n;
 public:
-    DisjoinSets(int);
+    explicit DisjoinSets(int);
     int find(int u);
     void merge(int x,int y);
 };

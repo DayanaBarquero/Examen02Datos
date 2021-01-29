@@ -4,7 +4,7 @@
 
 #include "File.h"
 
-void File::readVertex(Graph* littleGraph ) {
+void File::readVertex(Graph littleGraph ) {
     char a;
     char b;
     Vertex* v;
@@ -24,7 +24,7 @@ void File::readVertex(Graph* littleGraph ) {
                 a = data_csv[i].at(0);
                 b = data_csv[i+1].at(0);
                 v = new Vertex(a, b, stoi(data_csv[i+2]));
-                littleGraph->insertVertex(*v);
+                littleGraph.insertVertex(*v);
                 cout << v->toString() << endl;
             }
         }
