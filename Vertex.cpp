@@ -61,4 +61,28 @@ bool Vertex::operator!=(const Vertex &rhs) const {
     return !(rhs == *this);
 }
 
+bool Vertex::operator<(const Vertex &rhs) const {
+    if (weight < rhs.weight)
+        return true;
+    if (rhs.weight < weight)
+        return false;
+    if (firstVertex < rhs.firstVertex)
+        return true;
+    if (rhs.firstVertex < firstVertex)
+        return false;
+    return secondVertex < rhs.secondVertex;
+}
+
+bool Vertex::operator>(const Vertex &rhs) const {
+    return rhs < *this;
+}
+
+bool Vertex::operator<=(const Vertex &rhs) const {
+    return !(rhs < *this);
+}
+
+bool Vertex::operator>=(const Vertex &rhs) const {
+    return !(*this < rhs);
+}
+
 

@@ -39,7 +39,13 @@ public:
 
     bool operator!=(const Vertex &rhs) const;
 
+    bool operator<(const Vertex &rhs) const;
 
+    bool operator>(const Vertex &rhs) const;
+
+    bool operator<=(const Vertex &rhs) const;
+
+    bool operator>=(const Vertex &rhs) const;
 
 
 };
