@@ -4,7 +4,9 @@
 
 #include "File.h"
 
-void Files::readVertex(Graph *vertexs ) {
+void File::readVertex(Graph* littleGraph ) {
+    char a;
+    char b;
     Vertex* v;
     string line = "";
     string data = "";
@@ -19,8 +21,10 @@ void Files::readVertex(Graph *vertexs ) {
         }
         for (int unsigned i = 0; i < data_csv.size(); i++) {
             if (i % 3 == 0) {
-                v = new Vertex(data_csv[i], data_csv[i+1], stoi(data_csv[i+2]));
-                vertexs->insertVertex(*v);
+                a = data_csv[i].at(0);
+                b = data_csv[i+1].at(0);
+                v = new Vertex(a, b, stoi(data_csv[i+2]));
+                littleGraph->insertVertex(*v);
                 cout << v->toString() << endl;
             }
         }

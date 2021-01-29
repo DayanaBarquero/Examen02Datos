@@ -5,15 +5,16 @@
 #include "Graph.h"
 
 Graph::Graph() {
-  g=new vector<Vertex>;
+
+  g = new vector<Vertex>;
+
 }
 
-void Graph::insertVertex(Vertex edge) {
+void Graph::insertVertex(const Vertex& edge) {
     g->push_back(edge);
 }
 
-
-bool Graph::eraseEdge(Vertex edge) {
+bool Graph::eraseEdge(const Vertex& edge) {
     vector<Vertex>::iterator pos;
     for(pos = g->begin(); pos != g->end(); pos++){
         if(*pos == edge){
@@ -34,7 +35,7 @@ string Graph::toString() {
     return s.str();
 }
 
-bool Graph::isAdjacent(string u, string v) {
+bool Graph::isAdjacent(char u, char v) {
     vector<Vertex>::iterator pos;
     for(pos=g->begin(); pos !=g->end();pos++){
         if(pos->getFirstVertex()==u||pos->getSecondVertex()==v){
@@ -52,31 +53,8 @@ vector<Vertex> *Graph::getG() const {
 void Graph::setG(vector<Vertex> *g) {
     Graph::g = g;
 }
-string Graph::getVertexFirst() {
-    return v->getFirstVertex();
-}
-string Graph::getVetexSecond() {
-    return v->getSecondVertex();
-}
-int Graph::getWeight() {
-    return v->getWeight();
-}
 
-const vector<string> &Graph::getVertices() const {
-    return vertices;
-}
 
-void Graph::setVertices(const vector<string> &vertices) {
-    Graph::vertices = vertices;
-}
-
-Vertex *Graph::getV() const {
-    return v;
-}
-
-void Graph::setV(Vertex *v) {
-    Graph::v = v;
-}
 
 
 

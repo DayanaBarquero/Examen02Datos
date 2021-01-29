@@ -11,27 +11,27 @@ using namespace std;
 class Vertex {
 private:
     int weight;
-    string firstVertex;
-    string secondVertex;
+    char firstVertex;
+    char secondVertex;
 public:
     public:
     Vertex();
 
     virtual ~Vertex();
 
-    Vertex( const string &firstVertex, const string &secondVertex, int weight);
+    Vertex( const char &firstVertex, const char &secondVertex, int weight);
 
     int getWeight() const;
 
     void setWeight(int weight);
 
-    const string &getFirstVertex() const;
+    const char &getFirstVertex() const;
 
-    void setFirstVertex(const string &firstVertex);
+    void setFirstVertex(const char &firstVertex);
 
-    const string &getSecondVertex() const;
+    const char &getSecondVertex() const;
 
-    void setSecondVertex(const string &secondVertex);
+    void setSecondVertex(const char &secondVertex);
 
     std::string toString() const;
 

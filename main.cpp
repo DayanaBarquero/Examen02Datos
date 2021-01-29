@@ -1,21 +1,13 @@
 //
 // Created by dayan on 26/1/2021.
 //
+#include "Menu.h"
 #include <iostream>
 #include"Graph.h"
-#include "Kruskal.h"
 #include "Dijkstra2.h"
 int main(){
-  /*  Vertex d;
-    d.setFirstVertex("A");
-    d.setSecondVertex("B");
-    d.setWeight(8);
-    cout<<d.toString();
-   Graph graph;
-   graph.insertVertex(d);
-   cout<<graph.toString();
-   Kruskal f;
-   f.kruskaMST(graph);*/
+    Menu::menuPrincipal();
+ /*
 
     int seq = 0;
     char init_node = 'A';
@@ -44,7 +36,7 @@ int main(){
     }
 
     cout <<seq<< " Node : " << init_node << endl;
-
+*/
 
 
     return 0;

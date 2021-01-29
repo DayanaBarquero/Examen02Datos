@@ -4,13 +4,17 @@
 
 #ifndef EXAMEN02DATOS_MENU_H
 #define EXAMEN02DATOS_MENU_H
-
+#include "File.h"
+//#include "Kruskal.h"
 #include"Tools.h"
 
 class Menu {
+private:
+
+
 public:
-    void menuPrincipal();
-    void uploadFiles();
+    static void menuPrincipal();
+    static void uploadFiles();
     void dijkstraAlgorithm();
     void primAlgorithm();
     void kruskalAlgorithm();

@@ -5,6 +5,7 @@
 #include "Menu.h"
 
 void Menu::menuPrincipal() {
+    Menu m;
     int opcion;
     bool flag = true;
     imprimeCadenaEndl("Welcome to the program.");
@@ -21,7 +22,7 @@ void Menu::menuPrincipal() {
         imprimeCadenaEndl("     | ---------------------------------------------------------|");
         imprimeCadenaEndl("     |-->DIGITE 4:| Prim Algorithm                              |");
         imprimeCadenaEndl("     |----------------------------------------------------------|");
-        imprimeCadenaEndl("     |-->DIGITE 7:| Final                                       |");
+        imprimeCadenaEndl("     |-->DIGITE 5:| Final                                       |");
         imprimeCadenaEndl("     |__________________________________________________________|");
 
         imprimeCadenaEndl("Enter the option you want to carry out: ");
@@ -30,7 +31,7 @@ void Menu::menuPrincipal() {
         switch (opcion) {
             case 1: {
                 try {
-                  uploadFiles();
+                  Menu::uploadFiles();
                 }
                 catch (exception& e) {
                     imprimeCadenaEndl("The file can´t be opened.");
@@ -40,36 +41,23 @@ void Menu::menuPrincipal() {
             }break;
 
             case 2: {
-                dijkstraAlgorithm();
+                m.dijkstraAlgorithm();
                 pausa();
                 limpiaPantalla();
             }break;
 
             case 3: {
 
-                primAlgorithm();
+                m.primAlgorithm();
                 pausa();
                 limpiaPantalla();
             }break;
             case 4: {
-                kruskalAlgorithm();
+                m.kruskalAlgorithm();
                 pausa();
                 limpiaPantalla();
             }break;
             case 5: {
-
-
-                pausa();
-                limpiaPantalla();
-            }break;
-            case 6: {
-
-
-                pausa();
-                limpiaPantalla();
-            }break;
-
-            case 7: {
                 cout << "El programa ha finalizado";
                 flag = false;
             }break;
@@ -84,7 +72,8 @@ void Menu::menuPrincipal() {
 }
 
 void Menu::uploadFiles() {
-
+    auto *graph = new Graph;
+    File::readVertex(graph);
 }
 
 void Menu::dijkstraAlgorithm() {

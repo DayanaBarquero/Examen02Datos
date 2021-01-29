@@ -3,16 +3,15 @@
 //
 
 #include "Kruskal.h"
-
+/*
 unordered_map<string,string> Parent;
 unordered_map<string,int> Rank;
 
 Kruskal::~Kruskal() {
-
+    delete graph;
 }
-Kruskal::Kruskal() {}
 
-string Kruskal::find(string vertex) {
+string Kruskal::find(const string& vertex) {
     if(Parent[vertex] == vertex)
         return Parent[vertex];
     else
@@ -20,7 +19,7 @@ string Kruskal::find(string vertex) {
 
 }
 
-void Kruskal::Union(string root1, string root2) {
+void Kruskal::Union(const string& root1, const string& root2) {
     if(Rank[root1] > Rank[root2]){
         Parent[root2] = root1;
     }
@@ -35,21 +34,20 @@ void Kruskal::Union(string root1, string root2) {
     }
 }
 
-void Kruskal::makeSet(string vertex) {
+void Kruskal::makeSet(const string& vertex) {
     Parent[vertex] = vertex;
     Rank[vertex] = 0;
 }
 
-void Kruskal::kruskaMST(Graph &g) {
+void Kruskal::kruskaMST() {
     vector<Vertex> A;
-    for (auto c:g.getVertices()) {
-        makeSet(c);
+    for (const auto& c:*graph->getG()) {
+       //makeSet(c);
     }
-   sort(g.getG()->begin(),g.getG()->end(),[](Vertex x,Vertex y)
+   sort(graph->getG()->begin(),graph->getG()->end(),[](const Vertex& x,const Vertex& y)
     {return x.getWeight() < y.getWeight();});
 
-
-    for(const Vertex& e:*g.getG()){
+    for(const Vertex& e:*graph->getG()){
         string u = find(e.getFirstVertex());
         string v = find(e.getSecondVertex());
         if(u != v){
@@ -62,5 +60,14 @@ void Kruskal::kruskaMST(Graph &g) {
     }
 
 }
+
+Kruskal::Kruskal(Graph *graph) : graph(graph) {
+
+}
+
+Kruskal::Kruskal() {
+    graph = new Graph;
+}
+ */
 
 

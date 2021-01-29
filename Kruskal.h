@@ -12,15 +12,18 @@
 using namespace std;
 class Kruskal {
 private:
-    vector<string> v;
-    vector<Graph> edges;
+    Graph *graph;
 public:
-    static string find(string vertex);
-    static void Union(string root1,string root2);
-    static void makeSet(string vertex);
+    static string find(const string& vertex);
+    static void Union(const string& root1,const string& root2);
+    static void makeSet(const string& vertex);
+
+    Kruskal(Graph *graph);
+
     Kruskal();
+
     virtual ~Kruskal();
-    static void kruskaMST(Graph& g);
+    void kruskaMST();
 
 };
 
